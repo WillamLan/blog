@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="萧暁嵐" />
+
+
+
+<meta name="description" content="网上食品商城：良品铺子食品全浏览1整个良品铺子网上商城总共有：266种食品 坚果炒货 1该类共有：54种食品">
+<meta name="keywords" content="良品铺子,食品分类,网上商城">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java basic knowledge">
+<meta property="og:url" content="http://xxllearnsky.com/java-basic-knowledge/index.html">
+<meta property="og:site_name" content="Learn And Create Sky">
+<meta property="og:description" content="网上食品商城：良品铺子食品全浏览1整个良品铺子网上商城总共有：266种食品 坚果炒货 1该类共有：54种食品">
+<meta property="og:updated_time" content="2017-04-23T05:46:05.867Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="java basic knowledge">
+<meta name="twitter:description" content="网上食品商城：良品铺子食品全浏览1整个良品铺子网上商城总共有：266种食品 坚果炒货 1该类共有：54种食品">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="Learn And Create Sky" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>java basic knowledge | Learn And Create Sky</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/xxl.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">萧暁嵐</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">❤❤❤❤创新是快乐的源泉❤❤❤❤  ❤❤❤❤积累是知识的开始❤❤❤❤</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="false" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:15616655942@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/周杰伦/">周杰伦</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/她的睫毛/">她的睫毛</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/算法/">算法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/网上商城/">网上商城</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/良品铺子/">良品铺子</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/食品分类/">食品分类</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">萧暁嵐</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/xxl.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">萧暁嵐</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">❤❤❤❤创新是快乐的源泉❤❤❤❤  ❤❤❤❤积累是知识的开始❤❤❤❤</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:15616655942@163.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
+</nav>
+      <div class="body-wrap"><article id="post-java-basic-knowledge" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/java-basic-knowledge/" class="article-date">
+      <time datetime="2017-04-22T12:28:55.000Z" itemprop="datePublished">2017-04-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      java basic knowledge
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/网上商城/">网上商城</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/良品铺子/">良品铺子</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/食品分类/">食品分类</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+          
+        <h1 id="网上食品商城：良品铺子食品全浏览"><a href="#网上食品商城：良品铺子食品全浏览" class="headerlink" title="网上食品商城：良品铺子食品全浏览"></a>网上食品商城：<a href="http://www.lppz.com/" target="_blank" rel="external">良品铺子</a>食品全浏览</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">整个良品铺子网上商城总共有：266种食品</div></pre></td></tr></table></figure>
+<h2 id="坚果炒货"><a href="#坚果炒货" class="headerlink" title="坚果炒货"></a>坚果炒货</h2> <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：54种食品</div></pre></td></tr></table></figure>
+ <a id="more"></a>
+<ul>
+<li>淮盐花生米100g 椒盐原味 原果香味浓 颗粒饱满 满口溢出香 ￥4.90 加购物车 加关注 已售：242 评分：  </li>
+<li>瓜蒌籽奶香味150g 浓浓奶香 颗颗美味 ￥16.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>南瓜子绿茶味150g 【热销新品 买一送一】清新绿茶 颗粒饱满 ￥17.80 加购物车 加关注 已售：10000 评分：  </li>
+<li>碧根果椒盐味190g*3 颗粒饱满 大小均匀 香脆让人回味无穷 ￥59.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>炒米蛋黄味240g 颗颗香脆 粒粒可口 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>蟹黄味瓜子仁110g 优质原料 美味诱惑 多料入味 回味无穷 ￥5.00 加购物车 加关注 已售：247 评分：  </li>
+<li>奶香夏威夷果120g 颗粒饱满 壳薄肉多 ￥11.90 加购物车 加关注 已售：10045 评分：  </li>
+<li>葵花籽奶油味190g 壳薄肉厚 口感香脆 香味俱全 ￥7.90 加购物车 加关注 已售：137 评分：  </li>
+<li>青豌豆蒜香味120g 色泽青翠 颗颗酥脆 ￥6.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>盐焗腰果180g 无裹粉 非油炸 更健康 ￥19.90 加购物车 加关注 已售：10363 评分：  </li>
+<li>多味葵花籽180g 壳薄仁满 天然健康 ￥7.50 加购物车 加关注 已售：10167 评分：  </li>
+<li>奶香夏威夷果280g 包装袋内含开口器 精选澳洲果 壳薄肉脆 甜而不油腻 ￥27.90 加购物车 加关注 已售：10717 评分：  </li>
+<li>奶香碧根果120g 颗粒饱满 壳薄如纸 ￥11.90 加购物车 加关注 已售：323 评分：  </li>
+<li>炭烧腰果180g 越南神果 经典美味 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>小米锅巴五香味90g*2 怀旧零食 回忆经典 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>奶香味四粒红花生180g 口感香酥 无烂籽黑斑籽 ￥7.50 加购物车 加关注 已售：10177 评分：  </li>
+<li>碧根果奶香味190g*3 颗粒饱满 大小均匀 香脆让人回味无穷 ￥59.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>蛋花玉米65g 独特工艺 口感酥脆 颗颗爆开口 ￥2.50 加购物车 加关注 已售：263 评分：  </li>
+<li>南瓜子110g 壳薄肉厚 口感香脆 ￥11.90 加购物车 加关注 已售：10151 评分：  </li>
+<li>碧根果椒盐味208g 颗粒饱满 香浓脆酥 无可挑剔 ￥19.90 加购物车 加关注 已售：10564 评分：  </li>
+<li>夏威夷果奶香味200g*3 精选原料 香滑口感 ￥59.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>小米锅巴麻辣味90g 天然食材 极致美味 ￥6.00 加购物车 加关注 已售：111 评分：  </li>
+<li>盐焗夏威夷果280g 壳薄肉脆 果仁香酥滑嫩可口 美容养颜 果香浓烈 ￥27.90 加购物车 加关注 已售：10562 评分：  </li>
+<li>手剥甘栗120g 无添加 无污染 健康更美味 ￥11.00 加购物车 加关注 已售：10247 评分：  </li>
+<li>野山小核桃仁160g 果仁饱满 酥脆可口 口感醇香 ￥58.80 加购物车 加关注 已售：10157 评分：  </li>
+<li>甘草西瓜子218g 与享受慢时光的幸福相遇 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>甘栗仁100g 细腻甘甜 口感极佳 ￥11.00 加购物车 加关注 已售：10214 评分：  </li>
+<li>盐焗扁桃仁210g 香脆酥口 百吃不腻 ￥29.90 加购物车 加关注 已售：10311 评分：  </li>
+<li>碧根果奶香味190g 【跨年狂欢 原价31.50 现享6折】颗粒饱满 大小均匀 香脆让人回味无穷 ￥18.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>小米锅巴孜然味90g 天然食材 极致美味 ￥5.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>夏威夷果奶香味200g 精选原料 香滑口感 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>巴西松子218 【跨年狂欢 原价74.90 现享8折】巴基斯坦的“坚果国王” ￥59.90 加购物车 加关注 已售：301 评分：  </li>
+<li>奶香巴旦木120g 【跨年狂欢 原价15.90 立减6元】壳薄肉厚 自然原香 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>奶香巴旦木238g 壳薄肉厚 自然原香 ￥22.90 加购物车 加关注 已售：10695 评分：  </li>
+<li>炭烧腰果238g 色泽金黄 裹粉少 口感香脆 ￥23.90 加购物车 加关注 已售：10377 评分：  </li>
+<li>奶香良品山核桃238g 原色无漂白 果仁饱满 香浓酥脆 ￥26.90 加购物车 加关注 已售：10531 评分：  </li>
+<li>甘栗仁150g 原料精选燕山山脉的板栗 深褐色 糯性强 口感细腻 ￥12.90 加购物车 加关注 已售：414 评分：  </li>
+<li>炭烧腰果120g 色泽自然 酥脆松香 ￥11.90 加购物车 加关注 已售：10092 评分：  </li>
+<li>蟹黄风味豆瓣120g 咸香香酥 ￥4.50 加购物车 加关注 已售：10203 评分：  </li>
+<li>黄金夏威夷果仁170g 外焦内脆 颗颗可口 ￥45.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>椰香玉米65g 绿色天然健康 保留玉米营养 ￥2.50 加购物车 加关注 已售：10482 评分：  </li>
+<li>麻辣花生100g 颗颗入味 粒粒香酥 ￥4.90 加购物车 加关注 已售：10307 评分：  </li>
+<li>东北红松330g 浓香酥脆 回味香醇 ￥39.90 加购物车 加关注 已售：10216 评分：  </li>
+<li>碧根果椒盐味190g 颗粒饱满 大小均匀 香脆让人回味无穷 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>夏威夷果盐焗味200g 精选原料 香滑口感 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>甘栗80g 【跨年狂欢 年度热销】颗颗饱满 美味甘甜 ￥6.90 加购物车 加关注 已售：10229 评分：  </li>
+<li>爆米花（焦糖味）118g 美式球形 硕大圆整 精挑细选 香脆可口 原料精选 品质一流 ￥9.90 加购物车 加关注 已售：10127 评分：  </li>
+<li>沙拉薯条150g 香脆美味 好吃又实惠 ￥5.50 加购物车 加关注 已售：320 评分：  </li>
+<li>爆米花奶油味118g 一口酥脆 一口香浓 ￥9.90 加购物车 加关注 已售：10192 评分：  </li>
+<li>烘烤薯片番茄味98g 片片酥脆 酸甜爽口 烘焙工艺 健康营养 ￥9.90 加购物车 加关注 已售：10171 评分：  </li>
+<li>奶油味黑葵花籽150g 奶香浓郁 颗粒饱满 ￥9.90 加购物车 加关注 已售：354 评分：  </li>
+<li>鱼骨青豆80g 酥脆美味 鲜香回甘 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>小米锅巴五香味90g 怀旧零食 回忆经典 ￥6.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>肉松青豆120g 青豆松脆 肉松鲜香 ￥6.90 加购物车 加关注 已售：10000 评分：  </li>
+</ul>
+<hr>
+<h2 id="肉脯鱼干"><a href="#肉脯鱼干" class="headerlink" title="肉脯鱼干"></a>肉脯鱼干</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：63种食品</div></pre></td></tr></table></figure>
+<ul>
+<li>泡椒牛肉165g 地道重庆辣椒（泡椒） 花椒等配料调制 纯正川渝风味 ￥29.90 加购物车 加关注 已售：225 评分：  </li>
+<li>五香猪尾238g Q嫩爽滑 嚼劲十足 ￥39.90 加购物车 加关注 已售：10073 评分：  </li>
+<li>铁板鱿鱼丝60g 【包装升级 新旧包装随机发货】自然原色 原滋原味 没有添加粉末 ￥9.80 加购物车 加关注 已售：10271 评分：  </li>
+<li>奥尔良烤翅中250g 优质原料 鲜香扑鼻 经典工艺 健康营养 ￥34.90 加购物车 加关注 已售：219 评分：  </li>
+<li>香辣小黄鱼188g 咸辣鲜香 口味悠长 ￥15.90 加购物车 加关注 已售：419 评分：  </li>
+<li>灯影牛肉丝爆辣味250g 美味升级 爆辣出真味儿 ￥39.90 加购物车 加关注 已售：281 评分：  </li>
+<li>醉鱼干快乐香辣133g 鲜美滋味 酒香浓郁 ￥16.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>醉鱼干香辣味200g 肉质鲜嫩 坚中带糯 清香盈齿 ￥24.90 加购物车 加关注 已售：10051 评分：  </li>
+<li>营养肉松45g 纯天然无添加 绿色天然健康 ￥9.00 加购物车 加关注 已售：10111 评分：  </li>
+<li>香辣猪蹄250g 入口香脆爽滑 回味悠长有嚼劲 ￥23.90 加购物车 加关注 已售：10080 评分：  </li>
+<li>香辣味排骨200g 百年老配方 秘制卤汁工艺 让排骨安全入味 卤香可口 香而不腻 ￥29.90 加购物车 加关注 已售：10064 评分：  </li>
+<li>脆骨奥尔良风味150g 入口微脆 越嚼越有劲 ￥25.90 加购物车 加关注 已售：10191 评分：  </li>
+<li>酱卤牛肉香辣味200g 牛气轰轰 肉香浓郁 ￥39.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>烧烤味鱿鱼200g 鲜香爽口 吃一口让你无法拒绝 ￥23.90 加购物车 加关注 已售：10214 评分：  </li>
+<li>基围虾香辣味120g 享受鲜香麻辣的Q弹基围虾 ￥33.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>卤香味排骨200g 卤香可口 香而不腻 ￥29.90 加购物车 加关注 已售：10156 评分：  </li>
+<li>海苔肉松 海的咸香 酥到心里 ￥8.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>基围虾烧烤味120g 烧烤风味与Q弹虾肉在嘴里缠绵 ￥33.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>手撕牦牛肉麻辣味165g 来自雪域高原的美味 ￥49.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>猪肉粒香辣98g 醇香微甜 粒粒美味 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>迷你烤香肠158g*2 纯猪肉 无添加 嚼劲十足 ￥39.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>盐焗迷你翅98g 秘制美味 鲜美欲滴 ￥17.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>甜辣鸭舌58g 风味独特 爽滑细腻 甜辣口味 口口留香 ￥24.90 加购物车 加关注 已售：10308 评分：  </li>
+<li>烧烤牛肉165g 地道的重庆辣椒花椒等配料调制 纯正川渝风味 ￥29.90 加购物车 加关注 已售：10136 评分：  </li>
+<li>鸭翅甜辣味150g 尽享撕扯乐趣 ￥13.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>风味猪肉脯香辣味200g 让鲜香在味蕾里倘佯 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>奥尔良风味烤鸡翅178g 肉质紧密 色泽金黄 ￥15.50 加购物车 加关注 已售：10066 评分：  </li>
+<li>香辣猪尾238g 鲜香扑鼻 劲道十足 肉质丰厚 ￥39.90 加购物车 加关注 已售：10129 评分：  </li>
+<li>醉鱼干原味200g 肉质鲜嫩 愈嚼愈鲜 香辣爽口 ￥24.90 加购物车 加关注 已售：126 评分：  </li>
+<li>香辣金丝鱼80g 酥香可口 香味袭人 ￥15.90 加购物车 加关注 已售：10174 评分：  </li>
+<li>手撕牦牛肉五香味165g 来自雪域高原的美味 ￥49.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>鱿鱼足片80g 鱿鱼足片 每一口都是深海的味道 ￥9.90 加购物车 加关注 已售：311 评分：  </li>
+<li>风味猪肉脯自然片100g 越嚼越香 回味无穷 ￥11.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>奥尔良小鸡腿158g 无需做作 美味天成 ￥16.90 加购物车 加关注 已售：10279 评分：  </li>
+<li>迷你烤香肠炭烤味128g 醇厚浓郁 肉质紧密有嚼劲 ￥18.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>香酥小黄鱼118克 连鱼骨酥软，香醇回味 ￥13.00 加购物车 加关注 已售：0 评分：  </li>
+<li>迷你烤香肠香辣味290g 色如红枣 油亮光泽 浓香有嚼劲 ￥33.90 加购物车 加关注 已售：10023 评分：  </li>
+<li>牛板筋烧烤味180g 嚼劲超乎你的想象 ￥20.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>卤香猪蹄250g 肉质紧密有嚼劲 ￥24.80 加购物车 加关注 已售：295 评分：  </li>
+<li>灯影牛肉丝五香味108g 酥而不柴 根根纤细 ￥18.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>风干牛肉香辣味200g 肉食爱好者不可错过的好味 ￥47.90 加购物车 加关注 已售：588 评分：  </li>
+<li>小鱼仔（泡椒味）218g 肉质鲜嫩 回味鲜美 香辣包裹着四川泡菜的酸爽劲辣口感 ￥17.90 加购物车 加关注 已售：125 评分：  </li>
+<li>香辣味风琴鱿鱼80g 鱿鱼蛋白质含量高 脂肪含量极低 好吃又健康 ￥13.90 加购物车 加关注 已售：329 评分：  </li>
+<li>风味猪肉脯芝麻味200g 尽享每一缕肉丝带来的欢畅 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>牛肉粒五香98g 烘烤入味 香而不柴 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>风干牛肉原味200g 肉食爱好者不可错过的好味 ￥47.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>猪肉粒（XO酱）（98g） 醇香微甜 粒粒美味 ￥12.90 加购物车 加关注 已售：0 评分：  </li>
+<li>盐焗鸡翅135g 优质配料 现代盐焗工艺锁住营养美味 ￥20.50 加购物车 加关注 已售：10050 评分：  </li>
+<li>甜辣鸭舌150g 风味独特 口感细腻 营养丰富 ￥39.90 加购物车 加关注 已售：10012 评分：  </li>
+<li>盐焗鸡爪135g 皮韧肉嫩 满口留香 ￥14.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>炭烤鱿鱼丝60g 【跨年狂欢 原价9.80 立减2元】果木炭烤 极致鲜美 ￥7.90 加购物车 加关注 已售：10178 评分：  </li>
+<li>干煸牛肉165g 牛肉的鲜与辣椒的辣完美融合让人意犹未尽 口齿留香 ￥29.00 加购物车 加关注 已售：10138 评分：  </li>
+<li>风琴鱿鱼80g 经果木焙烤 拉松而成 色泽金黄香甜可口 ￥9.90 加购物车 加关注 已售：241 评分：  </li>
+<li>秘制卤牛肉140g 卤汁浓郁 劲道十足 肉质丰厚 ￥32.90 加购物车 加关注 已售：10203 评分：  </li>
+<li>灯影牛肉丝麻辣味158g 口感酥松 嚼劲十足 ￥24.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>迷你深海鱼肠原味108g 细腻鲜香 Q软有弹性 ￥9.90 加购物车 加关注 已售：789 评分：  </li>
+<li>开片金丝鱼80g 肉质一绝 滋味鲜甜 ￥15.90 加购物车 加关注 已售：10041 评分：  </li>
+<li>牛板筋麻辣味180g 【跨年狂欢 年度热销】牛板筋的嚼劲超乎你的想象 ￥20.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>香酥小黄鱼188g 【圣诞狂欢 】香酥鲜香 肉质紧密 ￥15.90 加购物车 加关注 已售：10166 评分：  </li>
+<li>野山椒凤爪260g 【跨年狂欢 原价25.90 立减7元】脆爽可口 消食开胃 ￥18.50 加购物车 加关注 已售：325 评分：  </li>
+<li>牛肉干五香味80g 它，就这么美味 ￥15.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>甜辣鸭脖154g 【跨年狂欢 原价25.80 现享5折】肉质细腻 辣中带甜 ￥12.90 加购物车 加关注 已售：298 评分：  </li>
+<li>风味猪肉脯原味200g 【跨年狂欢 原价33.20 现享6折】感受美食文化魅力 ￥19.90 加购物车 加关注 已售：10000 评分：      </li>
+</ul>
+<hr>
+<h2 id="果干果脯"><a href="#果干果脯" class="headerlink" title="果干果脯"></a>果干果脯</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：53种食品</div></pre></td></tr></table></figure>
+<ul>
+<li>黄桃脆片20g 原果营养不流失 口感酥脆 酸甜适中 片片美味 ￥6.00 加购物车 加关注 已售：340 评分：  </li>
+<li>天山珍枣100g 清新香脆 清爽不粘核 ￥15.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>清新柠檬片 能喝出新鲜柠檬的酸甜 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>天山贡枣100g 精选新疆二级灰枣 核小肉厚 果色新鲜 ￥16.50 加购物车 加关注 已售：221 评分：  </li>
+<li>金丝小枣350g 选用优质金丝小枣 味道甘香甜润 ￥26.90 加购物车 加关注 已售：359 评分：  </li>
+<li>健康红枣100g 新疆特产 个大皮薄 核小肉厚汁甜 ￥17.90 加购物车 加关注 已售：10138 评分：  </li>
+<li>昆仑尚枣400g 黄金口感 唇齿香甜 炭火烘焙 24％含水量 自然枣香 回味甘甜 ￥39.90 加购物车 加关注 已售：105 评分：  </li>
+<li>健康枣片50g 滋补佳品 吃出健康 ￥7.90 加购物车 加关注 已售：10061 评分：  </li>
+<li>扁桃仁夹心枣120g 红枣外裹 扁桃仁夹心 双层心意 甜蜜动人 ￥19.90 加购物车 加关注 已售：111 评分：  </li>
+<li>山楂夹心枣120g 红枣加山楂 双倍营养 美味更健康 ￥17.90 加购物车 加关注 已售：195 评分：  </li>
+<li>昆仑尚枣80g 选自新疆阿克苏地区上等骏枣 口味甘甜 ￥9.90 加购物车 加关注 已售：247 评分：  </li>
+<li>贵妃杨梅王108g 果香怡人 生津止渴 ￥9.90 加购物车 加关注 已售：150 评分：  </li>
+<li>天山御枣95g 肉厚核小 口感细腻 ￥23.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>黑糖梅饼60g 精心享受“每”一天 ￥11.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>柠檬片16g 含丰富维生素C 缓解压力 提神醒脑 ￥3.90 加购物车 加关注 已售：286 评分：  </li>
+<li>金凰后葡萄干250g 无添加 传统晾晒风干 ￥11.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>昆仑御枣70g 甜软香糯 皮薄肉厚 ￥16.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>健康枣片100g 健康“枣”点带给您 ￥16.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>蔓越莓干80g 色泽鲜艳 垂涎欲滴 ￥15.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>奶油话梅100g 话梅界的奶油小生 ￥10.80 加购物车 加关注 已售：10000 评分：  </li>
+<li>蜂蜜梅饼60g 蜂蜜融入青梅 甜蜜舒爽 ￥11.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>天山无核枣85g 无核放心吃 ￥16.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>香蕉脆片30g 酥脆爽口 自然清香 ￥7.90 加购物车 加关注 已售：10221 评分：  </li>
+<li>蜂蜜味樱桃80g 酸酸甜甜 果形饱满 ￥15.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>山楂片250g 休闲必备 清新宜人 ￥12.90 加购物车 加关注 已售：116 评分：  </li>
+<li>精装红玛瑙葡萄干250g 肉质细腻 粒大味美 ￥11.90 加购物车 加关注 已售：10374 评分：  </li>
+<li>阿胶蜜枣175g 糯甜无核 颗颗精选 ￥7.00 加购物车 加关注 已售：10520 评分：  </li>
+<li>蜜制芸豆80g 原生态 零污染 晶莹饱满 香甜糯口 ￥3.90 加购物车 加关注 已售：218 评分：  </li>
+<li>苹果脆片30g 果肉香浓 酸甜可口 ￥8.90 加购物车 加关注 已售：10054 评分：  </li>
+<li>大兴安岭野生蓝莓果干70g 具有防止脑神经老化 强心 抗癌软化血管 增强人机体免疫等功能 ￥29.50 加购物车 加关注 已售：301 评分：  </li>
+<li>冰糖山楂100g 酸甜适口 回味无穷 ￥8.00 加购物车 加关注 已售：10328 评分：  </li>
+<li>哈密瓜干108g 新鲜哈密瓜简单晒制 香醇可口 清香甘甜 ￥12.90 加购物车 加关注 已售：10097 评分：  </li>
+<li>白桃果干98g 色泽透亮 满口鲜甜 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>果丹皮250g 酸甜可口 爽滑有嚼劲 ￥9.90 加购物车 加关注 已售：10004 评分：  </li>
+<li>鸳鸯梅180g 爱你“梅”商量 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>老婆梅140g 老婆梅140g ￥11.90 加购物车 加关注 已售：0 评分：  </li>
+<li>菠萝片100g 脱水浓缩自然风味 ￥9.90 加购物车 加关注 已售：399 评分：  </li>
+<li>蜂蜜味话梅30g 最天然的开胃果 ￥3.50 加购物车 加关注 已售：150 评分：  </li>
+<li>良品QQ枣100g “枣”不同？ 迷你QQ枣随身带 ￥6.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>空心桂圆肉88g 泰国大颗粒桂圆 肉厚紧密 增强记忆力 降低血脂 美容养颜的作用 ￥18.90 加购物车 加关注 已售：10181 评分：  </li>
+<li>金枕头榴莲干36g 比新鲜榴莲更浓郁的美味 ￥17.90 加购物车 加关注 已售：10213 评分：  </li>
+<li>黑加仑葡萄干250g 无添加 传统晾晒风干 ￥14.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>蔓越莓干100g 【跨年狂欢 原价9.9 立减4元】酸甜可口 清新爽口 ￥5.90 加购物车 加关注 已售：10425 评分：  </li>
+<li>紫薯仔100g 香甜软糯 微甜清香 ￥9.90 加购物车 加关注 已售：10301 评分：  </li>
+<li>桂花加应子120g 【跨年狂欢 原价12.90 立减5元】桂花让嗅觉欢愉 ￥7.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>土耳其葡萄干罐装140g 自然甄选 晶莹剔透 ￥9.50 加购物车 加关注 已售：542 评分：  </li>
+<li>樱桃番茄135g 清爽微酸不失香甜 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>精装无核白葡萄干250g 堪称新疆的宝藏 ￥7.90 加购物车 加关注 已售：424 评分：  </li>
+<li>珍珠莲子80g 入口香甜爽口 舌尖上的顶级滋味 ￥8.90 加购物车 加关注 已售：222 评分：  </li>
+<li>珍珠梅150g 无尽酸爽 爽爆舌尖 ￥11.90 加购物车 加关注 已售：150 评分：  </li>
+<li>芒果干108g 酸甜爽口 香甜无渣 ￥13.90 加购物车 加关注 已售：100 评分：  </li>
+<li>雪花蓝莓片25g 蓝莓果肉打浆添加 蓝莓味纯正 清香酸甜 ￥3.90 加购物车 加关注 已售：10055 评分：  </li>
+<li>野生蓝莓果干80g 果肉细腻 口感酸甜 ￥31.90 加购物车 加关注 已售：10000 评分：       </li>
+</ul>
+<hr>
+<h2 id="素食山珍"><a href="#素食山珍" class="headerlink" title="素食山珍"></a>素食山珍</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：62种食品</div></pre></td></tr></table></figure>
+<ul>
+<li>清凉糖—蓝莓味16.8g 甘甜清爽 清新自然 齿颊留香 口气清新 ￥12.80 加购物车 加关注 已售：147 评分：  </li>
+<li>明治欣欣杯草莓酸奶味酱饼干条 美味“蘸”着吃 快乐无极限 ￥6.00 加购物车 加关注 已售：102 评分：  </li>
+<li>河马莉骨头饼牛奶味170g 独特可爱的造型 让孩子爱不释手 ￥13.90 加购物车 加关注 已售：10201 评分：  </li>
+<li>清凉糖—山楂味16.8g 山楂清爽 口齿留香 ￥12.80 加购物车 加关注 已售：10056 评分：  </li>
+<li>香酥大麻花160g 香酥脆爽 回味无穷 ￥5.90 加购物车 加关注 已售：10317 评分：  </li>
+<li>手造麻薯芒果味150g 采用咸咸芒果馅料 口感软糯细腻 传承台湾工艺 尽享独特风味 ￥6.00 加购物车 加关注 已售：10069 评分：  </li>
+<li>雪梨味布丁130g 雪梨香浓 口感爽滑 ￥3.90 加购物车 加关注 已售：10040 评分：  </li>
+<li>在一起伴手礼（提拉米苏曲奇）180g 一瓣香甜 一瓣思念 ￥25.00 加购物车 加关注 已售：10169 评分：  </li>
+<li>玫瑰鲜花饼240g 香酥脆皮 花香浓郁 ￥29.90 加购物车 加关注 已售：10167 评分：  </li>
+<li>黑糖沙琪玛270g 甜而不腻 香软可口 ￥11.00 加购物车 加关注 已售：10005 评分：  </li>
+<li>伊利儿童成长奶片高钙型 浓缩牛乳 即嚼即溶 ￥6.50 加购物车 加关注 已售：300 评分：  </li>
+<li>巧遇原味巧克力饼干88g 牛奶伴侣，巧遇美味 ￥10.90 加购物车 加关注 已售：10111 评分：  </li>
+<li>鸡蛋糕奶酪味300g 细腻软绵 鲜甜可口 ￥14.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>南枣核桃软糕180g 软糯香甜 入口难忘 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>伊利儿童成长奶片（DHA加强型） 片片奶香 浓浓爱意 ￥6.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>三明治蛋糕300g 细腻绵软 香甜可口 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>河马莉手指饼干特浓牛奶味125g 原装进口 美味可口 ￥15.00 加购物车 加关注 已售：10091 评分：  </li>
+<li>鲜蛋糕300g 松软细腻 有着浓郁鲜艳蛋香 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>雪沙酥原味300g 绵软酥香 入口鲜甜 ￥28.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>抹茶蜜豆曲奇90g 回归纯真好滋味 ￥10.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>纯真恋人巧克力味 尽享爱意的甜蜜之选 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>纯真恋人牛奶味 尽享爱意的甜蜜之选 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>威化饼干柠檬味200g 甜甜脆脆 香酥可口 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>臻品牛油曲奇368g 充满诱惑的牛油曲奇 ￥29.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>清凉糖—西柚味 清凉糖—西柚味 ￥12.80 加购物车 加关注 已售：50 评分：  </li>
+<li>涂层榛子酥塔188g 有层次的酥塔 够美味 ￥16.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>威化饼干草莓味200g 甜甜脆脆 香酥可口 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>芒果味布丁130g 浓浓的芒果风味 带你感受仲夏热情 ￥3.90 加购物车 加关注 已售：10117 评分：  </li>
+<li>坚果挞70g 创意点心新宠儿 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>椰果布丁720g 布丁香味浓郁 口感细滑 ￥13.90 加购物车 加关注 已售：10267 评分：  </li>
+<li>奶香华夫饼240克 Q弹有嚼劲 格格美味不停享 ￥15.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>小林吉祥煎饼115g 香味浓郁 酥脆出众 ￥13.00 加购物车 加关注 已售：10310 评分：  </li>
+<li>什锦味果汁软糖75g 软糖Q弹 入口清香 感受水果般的鲜美 添加10%纯正果汁 让果香在口中蔓延 ￥6.90 加购物车 加关注 已售：267 评分：  </li>
+<li>魔力速融巧克力123g 绝美享受，纯正比利时原料 ￥29.90 加购物车 加关注 已售：10108 评分：  </li>
+<li>不二家果味大棒棒糖10g 【圣诞狂欢 年度热销】香甜纯粹的水果 果味浓郁 乐趣无穷 ￥1.50 加购物车 加关注 已售：311 评分：  </li>
+<li>Morning cup杯子蛋糕 健康 方便 美味 ￥7.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>枣泥蛋糕300g 枣香弥漫 细腻绵柔 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>花生酥糖（香辣味）238g 浓香四溢 酥脆可口 ￥12.90 加购物车 加关注 已售：10075 评分：  </li>
+<li>涂层榛子酥塔92g 有层次的酥塔 够美味 ￥8.00 加购物车 加关注 已售：10000 评分：  </li>
+<li>橡皮糖（可乐熊）70g 可乐香飘 甜蜜动人 Q爽劲道 唇齿留香 ￥5.90 加购物车 加关注 已售：211 评分：  </li>
+<li>嚼劲果汁软糖芒果味 然你尖叫的美味 Q爽享不停 ￥11.80 加购物车 加关注 已售：10000 评分：  </li>
+<li>涂层杏仁酥塔188g 有层次的酥塔 够美味 ￥16.00 加购物车 加关注 已售：588 评分：  </li>
+<li>芒果果酱火山冻190g 火山式吃法 酸甜可口 ￥12.80 加购物车 加关注 已售：10000 评分：  </li>
+<li>红枣杞子沙琪玛270g 【跨年狂欢 年度热销】甜而不腻 细润香软 回味无穷 ￥11.00 加购物车 加关注 已售：10180 评分：  </li>
+<li>花生酥糖原味238g 花生加上饴糖是它香甜酥脆的秘密 增加熟芝麻的特殊香气 让整颗酥糖更添别样风味 甜而不腻 香脆不粘牙 ￥12.90 加购物车 加关注 已售：10118 评分：  </li>
+<li>巧遇牛奶味巧克力饼干88g 与美味巧遇，妙不可言 ￥10.90 加购物车 加关注 已售：10355 评分：  </li>
+<li>扁桃仁巧克力曲奇78g 香酥可口 口味醇厚 ￥10.90 加购物车 加关注 已售：241 评分：  </li>
+<li>手造麻薯红豆味150g 【跨年狂欢 年度热销】晶莹剔透 软糯Q弹 ￥6.00 加购物车 加关注 已售：10208 评分：  </li>
+<li>丹夫华夫饼原味240g 【跨年狂欢 年度热销】纯正华夫风味 香软可口 甜而不腻 ￥15.90 加购物车 加关注 已售：294 评分：  </li>
+<li>草莓果酱火山冻190g 火山式吃法 酸甜可口 ￥12.80 加购物车 加关注 已售：100 评分：  </li>
+<li>臻品牛油曲奇152g 充满诱惑的牛油曲奇 ￥9.90 加购物车 加关注 已售：240 评分：  </li>
+<li>小年糕60g 软糯诱人 香甜可口 回味无穷 ￥2.50 加购物车 加关注 已售：10377 评分：  </li>
+<li>切片蛋糕果丁味250g 烘烤而成 口感香软 好吃不上火 ￥9.90 加购物车 加关注 已售：10192 评分：  </li>
+<li>手造麻薯抹茶味150g 软糯香甜 绵密细腻 ￥6.00 加购物车 加关注 已售：471 评分：  </li>
+<li>法式烤芙条奶酪味270g 香软可口 蛋奶味浓 好吃不油腻 ￥24.90 加购物车 加关注 已售：10045 评分：  </li>
+<li>黑糖话梅糖238g 【跨年狂欢 年度热销】咸甜兼备 口味丰富而自然 ￥13.50 加购物车 加关注 已售：10149 评分：  </li>
+<li>肉松饼2100g 给每天一个精彩的开始 ￥69.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>肉松饼380g 没有理由错过的年度热销点心 ￥18.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>蔓越莓曲奇90g 【跨年狂欢 原价15.90 立减8元】口感酥脆 奶香浓郁 ￥7.90 加购物车 加关注 已售：560 评分：  </li>
+<li>玫瑰黑糖 【跨年狂欢 年度热销】暖暖一杯 温暖又贴心 ￥14.80 加购物车 加关注 已售：10000 评分：  </li>
+<li>椰丝球原味 外形俏皮 小巧迷人 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>肉松派300g 饱满松软 甜中带咸 ￥12.90 加购物车 加关注 已售：10000 评分：       </li>
+</ul>
+<hr>
+<h2 id="糕点糖果"><a href="#糕点糖果" class="headerlink" title="糕点糖果"></a>糕点糖果</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：26种食品</div></pre></td></tr></table></figure>
+<ul>
+<li>杏鲍菇250g 菌肉肥厚 质地脆嫩 味道鲜美 风味独特 ￥15.00 加购物车 加关注 已售：236 评分：  </li>
+<li>山椒豆干188g 含有丰富的植物性蛋白质 热量很低 ￥7.90 加购物车 加关注 已售：10152 评分：  </li>
+<li>泡椒味海带丝218g 天然无污染 藻体宽大 叶片肥厚 ￥7.90 加购物车 加关注 已售：10256 评分：  </li>
+<li>茶叶蛋 风味独特 飘香四溢 ￥1.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>海苔脆片16g 【新老包装切换中】营养丰富 香脆可口 ￥6.50 加购物车 加关注 已售：10640 评分：  </li>
+<li>泡椒味金针菇188g 劲爽泡椒 丝丝入味 ￥8.50 加购物车 加关注 已售：120 评分：  </li>
+<li>香卤铁蛋香辣味128g 让人上瘾的香辣Q弹 ￥9.90 加购物车 加关注 已售：10040 评分：  </li>
+<li>天妇罗紫菜（番茄味） 天妇罗紫菜（番茄味） ￥5.90 加购物车 加关注 已售：0 评分：  </li>
+<li>卤藕微辣味168g 洪湖九孔鲜藕 鲜香味美 ￥9.90 加购物车 加关注 已售：789 评分：  </li>
+<li>甜辣薄豆干320g 口感纯正 细腻爽滑 绵柔而韧 豆香四溢 ￥14.90 加购物车 加关注 已售：10404 评分：  </li>
+<li>Q爽豆干卤香味188g 弹性十足 软香嫩弹 会弹牙的豆干 ￥7.50 加购物车 加关注 已售：10000 评分：  </li>
+<li>香卤铁蛋五香味128g 【跨年狂欢 原价15.90 立减6元】入口紧实 Q弹爽口 ￥9.90 加购物车 加关注 已售：10007 评分：  </li>
+<li>风味豆干（牛肉味）188g 传承百年工艺，沿袭湖南地方特色传统卤制工艺 ，嚼劲十足，浓醇鲜香。 ￥7.90 加购物车 加关注 已售：114 评分：  </li>
+<li>鸡蛋干麻辣味158g 纯蛋清制作 无添加淀粉 ￥9.90 加购物车 加关注 已售：10522 评分：  </li>
+<li>麻辣豆干188g 素食佳肴 香辣醇香 ￥7.90 加购物车 加关注 已售：10283 评分：  </li>
+<li>风味豆干火辣味188g 【跨年狂欢 年度热销】劲道口感 超乎想象 ￥8.90 加购物车 加关注 已售：10017 评分：  </li>
+<li>野山笋泡椒味188g 劲爽脆辣 挑战你的味蕾 ￥12.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>鸡蛋干酱香味158g 口感Q嫩爽滑 越吃越好吃 ￥9.90 加购物车 加关注 已售：10150 评分：  </li>
+<li>鹌鹑卤蛋128g 采用传统的香料卤制工艺 卤蛋更有营养 ￥9.90 加购物车 加关注 已售：571 评分：  </li>
+<li>鸡蛋干麻辣味238g 卤香扑鼻 口感Q嫩爽滑 ￥14.90 加购物车 加关注 已售：269 评分：  </li>
+<li>卤藕五香味168g 卤汁渗透每片莲藕肉质中 口口鲜香 回味无穷 ￥9.90 加购物车 加关注 已售：10034 评分：  </li>
+<li>香辣卤藕168g 洪湖莲藕 口感香辣 美味十足 ￥9.90 加购物车 加关注 已售：970 评分：  </li>
+<li>脆笋香辣味188g 新鲜竹笋带来的爽脆 ￥9.90 加购物车 加关注 已售：154 评分：  </li>
+<li>金针菇香辣味188g 【跨年狂欢 年度热销】丝丝入味 香辣爽口 ￥9.90 加购物车 加关注 已售：561 评分：  </li>
+<li>海白菜泡椒味218g 脆酸爽 就是这个味 ￥9.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>香辣海带丝218g 【跨年狂欢 年度热销】香辣脆爽 好味道 ￥7.90 加购物车 加关注 已售：10293 评分：  </li>
+</ul>
+<hr>
+<h2 id="进口食品"><a href="#进口食品" class="headerlink" title="进口食品"></a>进口食品</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">该类共有：8种食品</div></pre></td></tr></table></figure>
+<ul>
+<li>菲壹品芒果汁饮料250ml 益胃生津 止咳降逆 酸甜爽口 甜而不腻 ￥6.50 加购物车 加关注 已售：165 评分：  </li>
+<li>Philippine芒果果粒汁饮料250ml 益胃生津 止渴降逆 口味独特 锁住营养 ￥6.50 加购物车 加关注 已售：10218 评分：  </li>
+<li>柠檬维生素C泡腾片80g 清爽柠檬 满口清爽 ￥19.90 加购物车 加关注 已售：205 评分：  </li>
+<li>菲壹品菠萝果粒果汁250ml 益胃生津 止咳降逆 酸甜爽口 甜而不腻 ￥6.50 加购物车 加关注 已售：10091 评分：  </li>
+<li>金银花 绒毛密批 正宗金银花才有 ￥19.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>清新乌龙茶 百年技艺 凝匠心于一盏茶香 ￥29.90 加购物车 加关注 已售：10000 评分：  </li>
+<li>甜橙维生素C泡腾片80g 富含丰富维生素 保护肠胃 利于人体吸收 小罐包装 携带更方便 老人 儿童易服用 ￥19.90 加购物车 加关注 已售：10052 评分：  </li>
+<li>Morning cup早餐营养豆乳 口感香浓 细腻质感 ￥29.90 加购物车 加关注 已售：10000 评分：      </li>
+</ul>
+<hr>
+<p>Edit By <a href="http://mahua.jser.me" target="_blank" rel="external">MaHua</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/java-basic-knowledge/">java basic knowledge</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">萧暁嵐</a></p>
+        <p><span>发布时间:</span>2017-04-22, 20:28:55</p>
+        <p><span>最后更新:</span>2017-04-23, 13:46:05</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/java-basic-knowledge/" title="java basic knowledge">http://xxllearnsky.com/java-basic-knowledge/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://xxllearnsky.com/java-basic-knowledge/　　作者: 萧暁嵐" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/hello-world/">
+                    Hello World
+                </a>
+            </div>
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/categoryy-test/">
+                    categoryy_test
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#网上食品商城：良品铺子食品全浏览"><span class="toc-number">1.</span> <span class="toc-text">网上食品商城：良品铺子食品全浏览</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#坚果炒货"><span class="toc-number">1.1.</span> <span class="toc-text">坚果炒货</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#肉脯鱼干"><span class="toc-number">1.2.</span> <span class="toc-text">肉脯鱼干</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#果干果脯"><span class="toc-number">1.3.</span> <span class="toc-text">果干果脯</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#素食山珍"><span class="toc-number">1.4.</span> <span class="toc-text">素食山珍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#糕点糖果"><span class="toc-number">1.5.</span> <span class="toc-text">糕点糖果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#进口食品"><span class="toc-number">1.6.</span> <span class="toc-text">进口食品</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"java basic knowledge　| Learn And Create Sky　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+        <section class="youyan" id="comments">
+    <script>
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = 'http://v2.uyan.cc/code/uyan.js?uid=2131714';
+            (d.head || d.body).appendChild(s);
+        }
+    </script>
+    
+    <script> loadComment(); </script>
+
+    <div id="uyan_frame"></div>
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/categoryy-test/" title="下一篇: categoryy_test">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/周杰伦music/">周杰伦music</a></li><li class="post-list-item"><a class="post-list-link" href="/邓紫棋MV/">邓紫棋MV</a></li><li class="post-list-item"><a class="post-list-link" href="/dba教程/">dba教程</a></li><li class="post-list-item"><a class="post-list-link" href="/oracle教程/">oracle教程</a></li><li class="post-list-item"><a class="post-list-link" href="/sql教程/">sql教程</a></li><li class="post-list-item"><a class="post-list-link" href="/mysql教程/">mysql教程</a></li><li class="post-list-item"><a class="post-list-link" href="/webMagic教教程/">webMagic教教程</a></li><li class="post-list-item"><a class="post-list-link" href="/vab教程/">vab教程</a></li><li class="post-list-item"><a class="post-list-link" href="/excl教程/">excl教程</a></li><li class="post-list-item"><a class="post-list-link" href="/groovy教程/">groovy教程</a></li><li class="post-list-item"><a class="post-list-link" href="/python教程/">python教程</a></li><li class="post-list-item"><a class="post-list-link" href="/javascript教程/">javascript教程</a></li><li class="post-list-item"><a class="post-list-link" href="/css教程/">css教程</a></li><li class="post-list-item"><a class="post-list-link" href="/html5教程/">html5教程</a></li><li class="post-list-item"><a class="post-list-link" href="/java教程/">java教程</a></li><li class="post-list-item"><a class="post-list-link" href="/Hexo教程/">Hexo教程</a></li><li class="post-list-item"><a class="post-list-link" href="/categoryy-test/">categoryy_test</a></li><li class="post-list-item"><a class="post-list-link" href="/java-basic-knowledge/">java basic knowledge</a></li><li class="post-list-item"><a class="post-list-link" href="/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2017 萧暁嵐
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
