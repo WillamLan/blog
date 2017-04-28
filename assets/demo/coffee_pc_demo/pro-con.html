@@ -6,15 +6,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://xxllearnsky.com">
-  <title>相册 | Learn And Create Sky</title>
+  <title>Learn And Create Sky</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="相册">
-<meta property="og:url" content="http://xxllearnsky.com/photo/index.html">
+  <meta name="description" content="body{ 			background: #fff; 		} 		.bufBox{ 			float: left; 			width: 50px; 			height: 50px; 			background: #ddd; 			border-radius: 5px; 			text-align: center; 			line-height: 50px; 			margin: 0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Learn And Create Sky">
+<meta property="og:url" content="http://xxllearnsky.com/assets/demo/coffee_pc_demo/pro-con.html">
 <meta property="og:site_name" content="Learn And Create Sky">
-<meta property="og:updated_time" content="2017-04-26T15:17:34.884Z">
+<meta property="og:description" content="body{ 			background: #fff; 		} 		.bufBox{ 			float: left; 			width: 50px; 			height: 50px; 			background: #ddd; 			border-radius: 5px; 			text-align: center; 			line-height: 50px; 			margin: 0">
+<meta property="og:updated_time" content="2017-04-28T04:35:36.258Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="相册">
+<meta name="twitter:title" content="Learn And Create Sky">
+<meta name="twitter:description" content="body{ 			background: #fff; 		} 		.bufBox{ 			float: left; 			width: 50px; 			height: 50px; 			background: #ddd; 			border-radius: 5px; 			text-align: center; 			line-height: 50px; 			margin: 0">
   
     <link rel="alternative" href="/atom.xml" title="Learn And Create Sky" type="application/atom+xml">
   
@@ -59,7 +62,7 @@
 	        
 				<li><a href="/tags/随笔/">随笔</a></li>
 	        
-				<li><a href="/photo">相册</a></li>
+				<li><a href="/photos">相册</a></li>
 	        
 			</ul>
 		</nav>
@@ -145,7 +148,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/photo">相册</a></li>
+					<li style="width: 33.333333333333336%"><a href="/photos">相册</a></li>
 		        
 				</ul>
 			</nav>
@@ -163,21 +166,65 @@
             <article id="page-undefined" class="article article-type-page " itemscope itemprop="blogPost">
   <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      相册
-    </h1>
-  
-
-        
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p><link type="text/css" href="/fancybox/jquery.fancybox.css" rel="stylesheet"><br>    <div class="instagram"><section class="archives album"><ul class="img-box-ul"></ul></section></div></p>
-<script src="/js/photo.js"></script>
+        <!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		body{
+			background: #fff;
+		}
+		.bufBox{
+			float: left;
+			width: 50px;
+			height: 50px;
+			background: #ddd;
+			border-radius: 5px;
+			text-align: center;
+			line-height: 50px;
+			margin: 0 5px;
+			position:relative;
+			overflow: hidden;
+		}
+		.bufCover{
+			width: 100%;
+			height: 0;
+			background: #f0f;
+			border-radius: 5px;
+			position: absolute;
+		}
+		#buf{
+			height: 60px;
+		}
+		#des p{
+			padding: 4px 0;
+			margin: 0;
+			font-size: 14px;
+		}
+		#des .desPro{
+			color: #333;
+			background: #EEE;
+		}
+		#des .desCon{
+			color: #EEE;
+			background: #333;
+		}
+		#des .desSpe{
+			background: #BBB;
+		}
+	</style>
+	<script type="text/javascript" src="../jquery.js"></script>
+</head>
+<body>
+	<button id="produce">生产</button>
+	<button id="consume">消费</button>
+	<div id="buf">
+	</div>
+	<div id="des"><p></p></div>
+	<script type="text/javascript" src="pro-con.js"></script>
+</body>
+</html>
       
 
       
@@ -261,7 +308,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="http://s.jiathis.com/qrcode.php?url=http://xxllearnsky.com/photo/" alt="微信分享二维码">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://xxllearnsky.com/assets/demo/coffee_pc_demo/pro-con.html" alt="微信分享二维码">
     </div>
 </div>
 
